@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link th:href="@{../css/styles.css}" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title>Employee Panel</title>
+</head>
+<body>
+
+
+
+<div align="center">
+    <div class="col-lg-3">
+        <form action="#" th:action="@{/chooseBuiding}"  method="GET">
+            <select class="form-control" id="buildingId" name="buildingId">
+                <option value="">Wybierz budynek z listy</option>
+                <option th:each="b : ${buildings}"
+                        th:value="${b.idBuilding}"
+                        th:text="${b.name} + ' ' + ${b.owner}"></option>
+            </select>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-info btn-login btn-building">Wybierz ten budynek</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

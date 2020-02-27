@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link th:href="@{../css/styles.css}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+</head>
+<body>
+<div align="center">
+    <br>
+    <h2>Logowanie</h2>
+    <hr>
+    <br>
+    <form action="#" th:action="@{/login}" th:object="${loginRequest}" method="GET">
+        <input type="text" th:field="*{login}" placeholder="Login" class="form-control mb-4 col-4" />
+        <input type="password" th:field="*{password}" placeholder="Hasło" class="form-control mb-4 col-4"/>
+        <button type="submit" class="btn btn-info col-2 btn-login">Login</button>
+    </form>
+</div>
+</body>
+</html>
