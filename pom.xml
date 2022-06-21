@@ -21,7 +21,7 @@
     <properties>
         <java.version>11</java.version>
         <hibernate.version>5.4.2.Final</hibernate.version>
-        <mysql.version>8.0.19</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <lombok.version>1.18.12</lombok.version>
     </properties>
 
